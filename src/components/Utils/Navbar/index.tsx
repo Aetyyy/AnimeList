@@ -19,7 +19,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-[#181818] border-gray-200">
+    <header className="bg-[#181818] border-gray-200 fixed w-full top-0 z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           href="/"
@@ -27,7 +27,7 @@ export default function Navbar() {
         >
           <Image
             src="/boren.webp"
-            className="h-8 w-8 rounded-full"
+            className="h-8 w-8 rounded-full z-0"
             width={64}
             height={64}
             alt="Boren Logo"
@@ -46,9 +46,7 @@ export default function Navbar() {
             </div>
             <SearchInput />
           </div>
-          <button
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-[#252525] focus:outline-none"
-          >
+          <button className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-[#252525] focus:outline-none">
             <RxHamburgerMenu className="w-6 h-6" />
           </button>
         </div>
