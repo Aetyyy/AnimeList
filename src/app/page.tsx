@@ -5,7 +5,7 @@ import TopAnime from "@/components/Home/TopAnime";
 
 export default async function Home() {
   "use server";
-  const res = await fetch(process.env.API_ANIME + "/top/anime?limit=8");
+  const res = await fetch(process.env.API_ANIME + "/top/anime?limit=12");
   const topAnime: AnimeData = await res.json();
   const Information: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
   Tempora laborum facere, nemo beatae modi maiores sequi, 
