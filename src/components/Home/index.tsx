@@ -26,7 +26,7 @@ export default function TopAnime({ api }: TopAnimeProps) {
         {api.data.map((i) => (
           <div key={i.mal_id} className="flex justify-center mt-6">
             <Link
-              href={`/${i.mal_id}`}
+              href={`/${i.title.replace(/%20/g, '-').replace(/\s+/g, '-')}`}
               className="cursor-pointer hover:scale-[105%] transition-transform duration-300"
             >
               <div className="w-[180px] flex flex-col">
